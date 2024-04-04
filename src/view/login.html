@@ -3,35 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Screen</title>
-    <link rel="stylesheet" href="login-styles.css">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: #f0f5f9; /* Light blue background */
+            font-family: Arial, sans-serif; /* Use Arial font */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff; /* White container background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            padding: 20px;
+            width: 300px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4e8cff; /* Blue button background */
+            color: #ffffff; /* White button text */
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #357ae8; /* Darker blue on hover */
+        }
+
+        .btn {
+            margin-top: 10px; /* Space between button and inputs */
+        }
+    </style>
 </head>
-
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form id="loginForm" action="main_menu.html" method="get"> 
-            <label for="username">Username: </label><br>
-            <input type="text" id="username" placeholder="Username">
-            <label for="password">Password: </label><br>
-            <input type="password" id="password" placeholder="Password">
-            <button type="submit">Log in</button>
-        </form>
-        <p>Don't have an account? <a href="create_account.html">Create Account</a></p>
-        <p id="loginMessage" class="message"></p>
-    </div>
-
-    <div class="signup-container" style="display: none;">
-        <h2>Sign up</h2>
-        <form id="signupForm">
-            <input type="text" id="newUsername" placeholder="Username">
-            <input type="email" id="newEmail" placeholder="Email">
-            <input type="password" id="newPassword" placeholder="Password">
-            <button type="submit">Sign up</button>
-        </form>
-        <p>Already have an account? <a href="#" id="LoginLink">Back to login.</a></p>
-    </div>
-
-    <script src="../controller/login-script.js"></script>
+    <form action="#" onsubmit="login(event)">
+        <div class="container">
+            <div>
+                <input type="text" name="" placeholder="Email" id="email">
+            </div>
+            <div>
+                <input type="password" name="" placeholder="Password" id="password">
+            </div>
+            <button id="signIn" value ="Sign In" class="btn">Sign In</button>
+        </div>
+    </form>
 </body>
+<script src="../controller/login-script.js" type="module"></script>
 </html>

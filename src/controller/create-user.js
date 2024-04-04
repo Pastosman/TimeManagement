@@ -3,8 +3,10 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-analytics.js";
 import { 
     getAuth, 
-    signInWithEmailAndPassword, 
+    createUserWithEmailAndPassword, 
 } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -22,34 +24,26 @@ const analytics = getAnalytics(app);
 const auth = getAuth();
 
 // Getting All the Objects of html
+var firstName = document.getElementById("firstName");
+var lastName = document.getElementById("lastName");
 var email = document.getElementById("email");
 var password = document.getElementById("password");
 
-// Function to handle login
-function login(e) {
+// Making a function to store data
+window.signup = function (e) {
     e.preventDefault();
-    
-    // Retrieve email and password values
     var obj = {
+        firstName: firstName.value,
+        lastName: lastName.value,
         email: email.value,
-        password: password.value
+        password: password.value,
     };
-    
-    // Sign in with email and password
-    signInWithEmailAndPassword(auth, obj.email, obj.password)
-        .then((userCredential) => {
-            // Signed in successfully
-            const user = userCredential.user;
-            console.log(user.uid); // You can use user.uid to identify the signed-in user
-            alert("Login Successful");
-            // Redirect to main_menu.html
-            window.location.href = "navigation.html";
+    createUserWithEmailAndPassword(auth, obj.email, obj.password)
+        .then(function(success) {
+            alert("Signup Successful");
         })
-        .catch((error) => {
-            // Handle errors here
-            alert("Login error: " + error.message);
+        .catch(function(err) {
+            alert("Error: " + err.message);
         });
-}
-
-// Assign login function to form submission
-document.querySelector("form").addEventListener("submit", login);
+    console.log(obj);
+};

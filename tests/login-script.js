@@ -43,7 +43,7 @@ function login(e) {
             console.log(user.uid); // You can use user.uid to identify the signed-in user
             alert("Login Successful");
             // Redirect to main_menu.html
-            window.location.href = "navigation.html";
+            window.location.href = "main_menu.html";
         })
         .catch((error) => {
             // Handle errors here
