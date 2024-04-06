@@ -73,3 +73,26 @@ setInterval(updateTime, 1000);
 
 });
   
+// Function to save the title to the webpage
+function saveTitle() {
+    const newTitle = $('#plannerTitle').text();
+    localStorage.setItem('plannerTitle', newTitle);
+}
+
+// Load the title from localStorage if it exists
+function loadTitle() {
+    const savedTitle = localStorage.getItem('plannerTitle');
+    if (savedTitle) {
+        $('#plannerTitle').text(savedTitle);
+    }
+}
+
+// Call loadTitle function when the page loads
+$(document).ready(function () {
+    loadTitle();
+
+    // Save the title when the save button is clicked
+    $('#saveTitleBtn').click(function () {
+        saveTitle();
+    });
+});
