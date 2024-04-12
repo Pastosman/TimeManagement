@@ -4,11 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body { 
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0; 
+            background-color:#ffffff;
+        }
+
+        /* Styling for menu items */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
         }
 
         .about-section {
@@ -41,15 +63,63 @@
         .button:hover {
             background-color: #555;
         }
+
+        /* Additional CSS for evenly spaced images */
+        .row.equal-height {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .row.equal-height .col-sm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .row.equal-height .col-sm:hover {
+            transform: scale(0.9);
+        }
+
+        /* Additional CSS for image animations */
+        .img-fluid {
+            transition: transform 0.5s ease;
+            max-width: 150px; /* Adjust the size as needed */
+            height: auto;
+        }
     </style>
 </head>
 <body>
-    <div class="about-section">
-        <h1>About Us Page </h1>
-        <p>Welcome to your own personal time management system!</p>
-        <p>You can set reminders, set schedules and create tasks for your own needs!</p>
+    <!-- Icon-based menu -->
+    <div class="navbar">
+        <a href="navigation.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="tasks_activities.html"><i class="fa fa-fw fa-tasks"></i> Tasks/Activities</a>
+        <a href="reminders.html"><i class="fa fa-fw fa-bell"></i> Reminders</a>
+        <a href="schedules.html"><i class="fa fa-fw fa-calendar"></i> Schedules</a>
+        <!-- -->
     </div>
-    <h2 style="text-align:center">Todo list Maker</h2>
-    
+    <div class="container">
+        <div class="about-section">
+            <h1>About Us Page </h1>
+            <p>Welcome to your own personal time management system!</p>
+            <p>You can set reminders, set schedules, and create tasks for your own needs!</p>
+        </div>
+        <!-- Modified row with evenly spaced images -->
+        <div class="row equal-height">
+            <div class="col-sm">
+                <img src="Images/clipboard.png" class="img-fluid" alt="Image 1">
+            </div>
+            <div class="col-sm">
+                <img src="Images/bell_icon.png" class="img-fluid" alt="Image 2">
+            </div>
+            <div class="col-sm">
+                <img src="Images/calendar_icon.png" class="img-fluid" alt="Image 3">
+            </div>
+        </div>
+        <!-- End of modified row -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

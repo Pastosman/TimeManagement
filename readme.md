@@ -20,8 +20,8 @@ was written in HTML5, CSS and JavaScript.
 - HTML5
 - CSS
 - JavaScript
-- Bootstrap
-- jQuery for the login system
+- Bootstrap for the about page
+- jQuery for the login system and scheduler system
 
 
 ## Installation

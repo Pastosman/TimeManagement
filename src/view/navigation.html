@@ -9,39 +9,40 @@
 </head>
 <body>
     <nav>
-     <ul class="sidebar">
-        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a>
-        <li><a href="main_menu.html">Home</a></li>
-        <li><a href="tasks_activities.html">Tasks/Activities</a></li>
-        <li><a href="reminders.html">Reminders</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="login.html">Login</a></li>
-     </ul>
-     <ul>
-        <li class="hideOnMobile"><a href="main_menu.html">Home</a></li>
-        <li class="hideOnMobile"><a href="tasks_activities.html">Tasks/Activities</a></li>
-        <li class="hideOnMobile"><a href="reminders.html">Reminders</a></li>
-        <li class="hideOnMobile"><a href="about.html">About</a></li>
-        <li class="hideOnMobile"><a href="login.html">Login</a></li>
-        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-     </ul>
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="main_menu.html">Home</a></li>
+            <li><a href="tasks_activities.html">Tasks/Activities</a></li>
+            <li><a href="reminders.html">Reminders</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+        <ul>
+            <li class="hideOnMobile"><a href="main_menu.html">Home</a></li>
+            <li class="hideOnMobile"><a href="tasks_activities.html">Tasks/Activities</a></li>
+            <li class="hideOnMobile"><a href="reminders.html">Reminders</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+            <li class="hideOnMobile"><a href="login.html">Login</a></li>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
     </nav>
     <!-- Digital clock start-->
     <div class="datetime">
         <div class="date">
-            <span id="dayname"></span></span>
-            <span id="month"></span></span>
-            <span id="daynum"></span></span>
-            <span id="year"></span></span>
+            <span id="dayname"></span>
+            <span id="month"></span>
+            <span id="daynum"></span>
+            <span id="year"></span>
         </div>
         <div class="time">
-            <span id="hour"></span></span>
-            <span id="minutes"></span></span>
-            <span id="seconds"></span></span>
-            <span id="period"></span></span>
+            <span id="hour"></span>
+            <span id="minutes"></span>
+            <span id="seconds"></span>
+            <span id="period"></span>
         </div>
     </div>
     <!-- Digital clock end-->
+
     <script>
         function showSidebar() {
             const sidebar = document.querySelector('.sidebar');

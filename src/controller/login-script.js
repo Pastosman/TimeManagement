@@ -41,7 +41,7 @@ function login(e) {
             // Signed in successfully
             const user = userCredential.user;
             console.log(user.uid); // You can use user.uid to identify the signed-in user
-            alert("Login Successful");
+            alert("Login Successful, Welcome to your personal time manager!");
             // Redirect to main_menu.html
             window.location.href = "navigation.html";
         })
