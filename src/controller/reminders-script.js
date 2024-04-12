@@ -65,9 +65,19 @@ function addReminder(title, description, dateTimeString) {
     actionCell.innerHTML = '<button onclick="deleteReminder(this);">Delete</button>';
 }
 
+// Function to delete a reminder
 function deleteReminder(button) {
     var row = button.parentNode.parentNode;
-    row.parentNode.removeChild(row);
+    var table = row.parentNode;
+    var rowIndex = row.rowIndex - 1; // Adjusting for the table header row
+    
+    // Remove the reminder from the table
+    table.deleteRow(rowIndex);
+    
+    // Remove the reminder from localStorage
+    var reminders = JSON.parse(localStorage.getItem('reminders')) || [];
+    reminders.splice(rowIndex, 1);
+    localStorage.setItem('reminders', JSON.stringify(reminders));
 }
 
 // Save reminder to localStorage
@@ -77,9 +87,14 @@ function saveReminder(reminder) {
     localStorage.setItem('reminders', JSON.stringify(reminders));
 }
 
-// Load reminders from localStorage
+// Function to load reminders from localStorage
 function loadReminders() {
     var reminders = JSON.parse(localStorage.getItem('reminders')) || [];
+    var tableBody = document.getElementById("reminderTableBody");
+    // Clear existing reminders from the UI
+    tableBody.innerHTML = '';
+
+    // Add reminders to the UI
     reminders.forEach(function(reminder) {
         addReminder(reminder.title, reminder.description, reminder.dateTimeString);
     });

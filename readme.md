@@ -1,1 +1,31 @@
 # Time Management Application - Emil Santos
+
+Author: Emil Santos (2024)
+
+## Introduction 
+
+This project is a personal time management web application that allows the user to create and manage tasks. This application
+was written in HTML5, CSS and JavaScript.
+
+## Features
+
+- Create tasks
+- Edit tasks
+- Delete tasks
+- View tasks by date
+- A Daily Scheduler was added to the application to help the user manage their time.
+
+## Technologies Used
+
+- HTML5
+- CSS
+- JavaScript
+- Bootstrap
+- jQuery for the login system
+
+
+## Installation
+
+To install this application, clone the repository and open the index.html file within your editor. 
+You can achieve this by running it through a live server. 
+
