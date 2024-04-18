@@ -6,7 +6,7 @@
     <title>Firebase Database Implementation (Updated Sign Up Page)</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: #f0f7f9; /* Light blue background */
         }
 
@@ -66,32 +66,41 @@
     </style>
 </head>
 <body>
+    <!-- Container wrapper for sign-up form -->
     <div class="wrapper">
+        <!-- Sign-up form -->
         <h1>Sign Up</h1>
         <form onsubmit="signup(event)">
+            <!-- First Name input field -->
             <div>
                 <label for="firstName">First Name</label>
                 <input type="text" name="firstName" id="firstName" placeholder="Enter your first name">
             </div>
+            <!-- Last Name input field -->
             <div>
                 <label for="lastName">Last Name</label>
                 <input type="text" name="lastName" id="lastName" placeholder="Enter your last name">
             </div>
+            <!-- Email input field -->
             <div>
                 <label for="email">Email</label>
                 <input type="text" name="email" id="email" placeholder="Enter your email">
             </div>
+            <!-- Password input field -->
             <div>
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password" placeholder="Enter your password">
             </div>
+            <!-- Sign-up button -->
             <button id="signupinp" value="Sign Up">Sign Up</button>
 
+            <!-- Member link -->
             <div class="member">
                 Already have an account? <a href="login.html">Login Here</a>
             </div>
         </form>
     </div>
 </body>
+<!-- Include JavaScript file for creating user -->
 <script src="../controller/create-user.js" type="module"></script>
 </html>

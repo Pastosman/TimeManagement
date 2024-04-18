@@ -32,45 +32,52 @@
 <body>
     <!-- Icon-based menu -->
     <div class="navbar">
+        <!-- Navigation links -->
         <a href="navigation.html"><i class="fa fa-fw fa-home"></i> Home</a>
         <a href="tasks_activities.html"><i class="fa fa-fw fa-tasks"></i> Tasks/Activities</a>
         <a href="reminders.html"><i class="fa fa-fw fa-bell"></i> Reminders</a>
         <a href="schedules.html"><i class="fa fa-fw fa-calendar"></i> Schedules</a>
         <!-- -->
     </div>
-    <body>
-        <div class="container">
-            <h2 style="text-align: center">Reminder Listings</h2>
 
-            <label for="">Title: </label>
-            <input type="text" id="title" />
-            <label for="">Decscription: </label>
-            <input type="text" id="description">
-            <label for="">Date: </label>
-            <input type="date" id="date" />
-            <label for ="time">Time: </label>
-            <input type="time" id="time" />
-            
-            <button style ="width: 100%" onclick="scheduleReminder();">
-                Schedule Reminder
-            </button>
+    <!-- Reminder form and listings container -->
+    <div class="container">
+        <!-- Heading for reminder listings -->
+        <h2 style="text-align: center">Reminder Listings</h2>
 
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Due Date and Time</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody id="reminderTableBody"></tbody>
-            </table>
-        </div>
-
-        <audio src="notficationsoundeffect.mp3" id="notificationSound"></audio>
+        <!-- Reminder input fields -->
+        <label for="title">Title: </label>
+        <input type="text" id="title" />
+        <label for="description">Description: </label>
+        <input type="text" id="description">
+        <label for="date">Date: </label>
+        <input type="date" id="date" />
+        <label for="time">Time: </label>
+        <input type="time" id="time" />
         
-        <script src="../controller/reminders-script.js" defer></script>
-    </body>
+        <!-- Button to schedule a reminder -->
+        <button style="width: 100%" onclick="scheduleReminder();">
+            Schedule Reminder
+        </button>
+
+        <!-- Table to display reminder listings -->
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Due Date and Time</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="reminderTableBody"></tbody>
+        </table>
+    </div>
+
+    <!-- Audio element for notification sound -->
+    <audio src="notficationsoundeffect.mp3" id="notificationSound"></audio>
+    
+    <!-- JavaScript file for reminders functionality -->
+    <script src="../controller/reminders-script.js" defer></script>
 </body>
 </html>

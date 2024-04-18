@@ -31,28 +31,31 @@
 <body>
     <!-- Icon-based menu -->
     <div class="navbar">
+        <!-- Navigation links -->
         <a href="navigation.html"><i class="fa fa-fw fa-home"></i> Home</a>
         <a href="tasks_activities.html"><i class="fa fa-fw fa-tasks"></i> Tasks/Activities</a>
         <a href="reminders.html"><i class="fa fa-fw fa-bell"></i> Reminders</a>
         <a href="schedules.html"><i class="fa fa-fw fa-calendar"></i> Schedules</a>
-        <!-- -->
+    <!-- Icon menu end -->
     </div>
+
+    <!-- Container for the task manager -->
     <div class="container">
         <div class="todo-app">
+            <!-- Display current day -->
             <p id="currentDay" class="lead"></p>
-            <!-- DATE AND TIME -->
+            <!-- Form to add new task/activity -->
             <h2>Create A Task Or Activity<img src="images/icon.png"></h2>
             <div class="row">
                 <input type="text" id="input-box" placeholder="Add your Task/Activity">
                 <button onclick="addTask()">Add</button>
             </div>
-            <ul id="list-container">
-                <!-- <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li> -->
-            </ul>
+            <!-- List container for displaying tasks/activities -->
+            <ul id="list-container"></ul>
         </div>
     </div>
+
+    <!-- JavaScript file for tasks/activity/to-do list maker functionality -->
     <script src="../controller/tasks-script.js"></script>
 </body>
 </html>

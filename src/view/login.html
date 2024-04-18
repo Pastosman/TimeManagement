@@ -6,7 +6,7 @@
     <title>Personal Time Manager</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             background-color: #f0f7f9; /* Light blue background */
         }
 
@@ -66,24 +66,31 @@
     </style>
 </head>
 <body>
+    <!-- Sign-in form -->
     <form action="#" onsubmit="login(event)">
+        <!-- Container wrapper -->
         <div class="container">
+            <!-- Heading -->
             <h1>Personal Time Manager</h1>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" placeholder="Enter your email">
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Enter your password">
-                </div>
-                <button id="signIn" value="Sign In">Sign In</button>
-            </form>
+            <!-- Email input field -->
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Enter your email">
+            </div>
+            <!-- Password input field -->
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+            </div>
+            <!-- Sign-in button -->
+            <button id="signIn" value="Sign In">Sign In</button>
+            <!-- Create account link -->
             <p class="create-account">
                 Don't have an account? <a href="create_account.html">Create one here</a>
             </p>
         </div>
     </form>
 </body>
+<!-- Include JavaScript file for login functionality -->
 <script src="../controller/login-script.js" type="module"></script>
 </html>
